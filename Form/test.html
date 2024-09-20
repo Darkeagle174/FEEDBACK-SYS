@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -51,7 +52,7 @@
 </head>
 <body>
     <div class="heading">
-    <h2>Faculty Review Form</h2>
+    <h2>Feedback Form</h2>
     </div>
     <div class="form">
     <form action="submit_review.php" method="POST">
@@ -91,25 +92,8 @@
         <input type="radio" name="q5" value="5"> 5
 
         <br><br>
-        <input type="submit" value="Submit Review">
+        <input type="submit" value="Submit Feedback">
     </form>
     </div>
 </body>
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $q1 = $_POST['q1'];
-    $q2 = $_POST['q2'];
-    $q3 = $_POST['q3'];
-    $q4 = $_POST['q4'];
-    $q5 = $_POST['q5'];
-
-    echo "Thank you for your review! Here are your ratings: <br>";
-    echo "1. Explanation of the subject: $q1<br>";
-    echo "2. Teaching methods: $q2<br>";
-    echo "3. Engagement with students: $q3<br>";
-    echo "4. Punctuality: $q4<br>";
-    echo "5. Overall satisfaction: $q5<br>";
-}
-?>
-
 </html>
